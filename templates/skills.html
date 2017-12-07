@@ -1,7 +1,7 @@
 {% include "navigation_bar.html" %}
 {% block head %}
     <script>
-        function myFunction() {
+        function filterSkills() {
             var input, filter, ul, li, a, i;
             input = document.getElementById("myInput");
             filter = input.value.toUpperCase();
@@ -22,9 +22,10 @@
 <div class="w3-container" id="top-link">
         <h2>Tools, Programming languages and Skills:</h2>
 
-        <input class="w3-input w3-border w3-padding w3-grey" type="text" placeholder="Search for skills..." id="myInput" onkeyup="myFunction()">
+        <input class="w3-input w3-border w3-padding w3-grey w3-hover-green" type="text" placeholder="Search for skills..." id="myInput" onkeyup="filterSkills()">
       <ul class="w3-ul w3-margin-top" id="myUL">
         <li>Python</li>
+        <li>Amazon Web Services (AWS)</li>
         <li>Perl Scripting</li>
         <li>Java Programming</li>
         <li>C Programming</li>
