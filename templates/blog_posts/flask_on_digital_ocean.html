@@ -1,0 +1,62 @@
+{% include 'navigation_bar.html' %}
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Hosting Flask Application on Digital Ocean</title>
+{% endblock %}
+
+{% block content %}
+<center>
+        <h2>{{date}} - Hosting Flask Application on Digital Ocean Droplets</h2>
+        <h4>Reading + Setup + Testing time: ~ 30 minutes</h4>
+</center>
+<div class="w3-container well">
+    <center><img src="/static/images/blog_post_images/flask_do.png" height="400" width="800"></center><br /><br />
+    <p>
+        Hello there! This blog post is a tutorial of sorts (more of a collection) on how to host a flask application on
+        Digital Ocean Droplets. For folks who don't know what Digital ocean droplets are: <br />
+        <strong><em>Droplets are virtual servers in DigitalOcean (DO).</em></strong>
+    </p>
+    <p>
+        I have always admired the documentation and support for digital ocean. Any how-tos for linux systems, you can
+        definitely find something related on DO. After an attempt to host my website on my Raspberry pi went vain due to
+        handling of traffic, I started thinking of an alternate solution. That's when I thought of DO.
+    </p>
+    <p>
+        I thought getting this going would be super complicated but it was just the opposite. Here's my experience with
+        setup: <br />
+        <ul>
+            <li>Sign up & creating my first droplet was a breeze. Phew!</li>
+            <li>Setting up my droplet, installing require software / libraries was pretty straightforward.</li>
+            <li>In no time, I got my Flask application running.</li>
+            <li>Then all I had to do is, change the DNS servers to point to DO.</li>
+        </ul>
+        <br />
+    That's it!!
+    </p>
+
+    <p>
+        So if you want to create a flask application or any application within matter of few minutes, DO is the way to go! <br />
+        You can get started with a droplet at $5/month. They also have credit promotions and referrals. <br />
+
+        <h3>Get Started!</h3>
+        <ul>
+            <li><a href="https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet" class="w3-text-blue"
+                   target="_blank">Create your first droplet</a></li>
+            <li><a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04" class="w3-text-blue"
+                   target="_blank">Droplet / Server setup</a></li>
+            <li><a href="https://www.digitalocean.com/community/tutorials/how-to-launch-your-site-on-a-new-ubuntu-14-04-server-with-lamp-sftp-and-dns"
+                   class="w3-text-blue" target="_blank">Installing libraries and transferring files to your server</a></li>
+            <li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean" class="w3-text-blue"
+             target="_blank">Setting up DNS & CNAME records</a></li>
+            <li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications" class="w3-text-blue"
+             target="_blank">Setup ubuntu droplets for python web applications</a></li>
+        </ul>
+    </p>
+    <p>
+        Signup with DO today <a href="http://bit.ly/2fBD495" target="_blank" class="w3-text-blue">here</a>
+    </p>
+</div>
+<footer>
+    Image Source: Digital Ocean through Google Images.
+</footer>
+{% endblock %}

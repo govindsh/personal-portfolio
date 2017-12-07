@@ -1,0 +1,98 @@
+{% include "navigation_bar.html" %}
+{% block head %}
+<!-- Bootstrap files for bootstrap tour-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/css/bootstrap-tour.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js"></script>
+
+<script>
+    $(function () {
+        var tour = new Tour() ;
+
+        tour.addSteps([{
+                element: "#profile",
+                title: "<strong>Check out my profile</strong> 😎",
+                content: "<h4>Includes my work experience, projects, skill set, etc.</h4>"
+            },
+            {
+                element: "#interests",
+                title: "<strong>Discover my interests as well</strong> 🎥",
+                content: "<h4>I direct films and have passion for photography.</h4>"
+            },
+            {
+                element: "#gist_code",
+                title: "<strong>Look at my coding</strong>",
+                content: "<h4>Some of my public gists</h4>"
+            },
+            {
+                element: "#blog_post",
+                title: "<strong>My latest blog</strong>",
+                content: "<h4>Check out my latest post!</h4>"
+            },
+            {
+                element: "#contactme",
+                title: "<strong>Poke, buzz or tweet me!</strong>",
+                content: "<h4>A hello would be nice plus some thoughts about the website as well 😀</h4>"
+            }]);
+
+        // Initialize the tour
+        tour.init().restart();
+    });
+</script>
+
+{% endblock %}
+{% block body %}
+    <center>
+        <img class="w3-animate-top" src="/static/images/srikkanth.jpg" height="400" width="600">
+        <br><br>
+            <p class="well w3-animate-right">
+                Hi! Thank you for visiting my website. My name is Srikkanth Govindaraajan.<br>
+                Living in the Boston area, I work as a full time Senior Software Engineer with GlobalLogic, Inc.<br>
+                Check out my website, my interests.<br>
+            </p>
+            <div class="w3-container w3-animate-bottom">
+                <button id="button1" class="w3-button w3-blue w3-hover-text-black" onclick="$('#iframe-video').slideToggle();">
+                    <b>Click here to see an introduction video. Please allow access to Adobe Flash player.</b>
+                </button>
+            </div>
+            <br><br>
+            <div class="w3-container well" style="display:none;" id="iframe-video">
+                <iframe width="1280" height="761" src="http://www.powtoon.com/embed/esyY07qdH3Q/" frameborder="0"></iframe>
+            </div>
+
+            <div class="w3-container well">
+                <br>
+                <center>
+                    <div class="w3-display-container" style="display:block;">
+                        <img src="/static/images/project.gif" height="300" width="400">
+                        <div class="w3-display-topmiddle w3-hide-small">
+                            <strong>Current Project: Using Splinter for web application Testing</strong>
+                        </div>
+                        <div class="w3-display-bottommiddle w3-hide-small">
+                            <strong>Currently Learning: AWS</strong>
+                        </div>
+                    </div>
+                </center>
+                <br>
+            </div>
+            <br><br>
+
+        <div class="w3-container well w3-animate-top">
+        I'm very social, catch up with me!<br><br>
+<!--        Facebook-->
+        <a href="https://www.facebook.com/srikbaba" target="_blank"><i class="fa fa-facebook-official" style="font-size:48px;color:blue;padding:10px;"></i></a>
+
+<!--        Google Plus-->
+        <a href="https://plus.google.com/u/0/+SrikkanthGovindaraajan" target="_blank"><i class="fa fa-google-plus-square" style="font-size:48px;color:red;padding:10px"></i></a>
+
+<!--        LinkedIn-->
+        <a href="https://www.linkedin.com/in/srikkanthgovindaraajan/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:48px;color:teal;padding:10px"></i></a>
+
+<!--        Twitter-->
+        <a href="https://twitter.com/srikk_baba" target="_blank"><i class="fa fa-twitter" style="font-size:48px;color:green;padding:10px;"></i></a>
+    </div>
+    </center>
+<footer style="text-align: center;">
+    <strong>Copyright Srikkanth Govindaraajan 2017</strong><br />
+    This website is hosted on DigitalOcean Droplet.
+</footer>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "navigation_bar.html" %}
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Hello World Version 2!</title>
+{% endblock %}
+
+{% block content %}
+    <center>
+        <h2>{{date}} - Hello World version 2!</h2>
+        <h4>Reading time: 5 minutes</h4>
+    </center>
+    <div class="well w3-container">
+        <p>
+            Thought of linking <a class="w3-text-blue" href="https://myfirstblog-srikkanth.blogspot.com/">my blogger
+            account</a> to my website,
+            but a new website requires a new blog right? So that's why "Version 2". After taking a long hiatus from blogging,
+            I've decided to resume blogging but this time more regularly. Some general topics that will make up this blog will
+            be - social experiments, posts regarding software & tools, programming languages, movie reviews and about my
+            personal experiences, etc.
+
+            <br><br>
+
+            I just want to keep my first post short & sweet, so I'm just going to say that this blog which is part of my
+            website is also hosted on my raspberry pi Model B with the help of a sqlite database. The database holds the
+            title of the post (Primary key), content and date of the post. <br><br>
+
+            <center><img src="/static/images/sqlite_python.jpg" alt="Sqlite + Python" height="200" width="600"></center> <br>
+
+            Here are some of the links that will help you get started with sqlite. I intend to create a gist for
+            this soon. <br><br>
+
+            <!--Helpful tutorial-->
+            <a class="w3-text-blue" href="http://zetcode.com/db/sqlitepythontutorial/">Zetcode SQLite Python Tutorial</a>
+            <br>
+            <strong>Some Stackoverflow questions that helped me when I was stuck</strong><br><br>
+
+            <!--Some helpful questions in Stack Overflow-->
+            <a href="https://stackoverflow.com/questions/25387537/sqlite3-operationalerror-near-syntax-error" class="w3-text-blue">
+                sqlite3.OperationalError: syntax error
+            </a> <br>
+
+            <a href="https://stackoverflow.com/questions/16856647/sqlite3-programmingerror-incorrect-number-of-bindings-supplied-the-current-sta"
+               class="w3-text-blue">sqlite3.ProgrammingError: Incorrect number of bindings supplied.</a>
+            <br>
+
+            <a href="https://stackoverflow.com/questions/3939361/remove-specific-characters-from-a-string-in-python"
+               class="w3-text-blue">Remove specific characters from a string in python</a>
+
+            <br>
+
+            Happy coding till I come up with a new post!
+        </p>
+    </div>
+
+<!--Facebook like button Integration-->
+<!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your like button code -->
+  <div class="fb-like" data-href="http://www.srikkanthgovindaraajan.com/show_post/{{title}}" data-layout="standard"
+       data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+  <br><br>
+
+  <div class="fb-comments" data-href="http://www.srikkanthgovindaraajan.com/show_post/{{title}}" data-numposts="10"></div>
+
+{% endblock %}

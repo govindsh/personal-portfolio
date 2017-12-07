@@ -1,0 +1,153 @@
+{% include 'navigation_bar.html' %}
+{% block head %}
+<style>
+    .mySlides {display: none}
+    .w3-left, .w3-right, .w3-badge {cursor:pointer}
+    .w3-badge {height:13px;width:13px;padding:0}
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="w3-container w3-text-red">
+    <marquee><strong>Some images may take time to load.</strong></marquee>
+</div>
+
+<div class="w3-container">
+    <center><h4>Some of the pics I have shot with my Canon Rebel T3i & Sony alpha 6000 and my iPhone 6s+</h4></center>
+</div>
+
+<div class="w3-content w3-display-container">
+
+        <div class="w3-display-container mySlides">
+            <img src="static/images/photos/bee.jpg" style="width:100%">
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Honey bee from the lens of Sony Alpha 6000.
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img src="static/images/photos/boston_common.jpg" style="width:100%">
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                A nice view of the Boston commons.
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img src="static/images/photos/boston_harbor.JPG" style="width:100%">
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Boston Harbor - Great weather!.
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img src="static/images/photos/boston_skyline1.jpg" style="width:100%">
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Boston Skyline seen from Boston Harbor Cruise.
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/boston_skyline2.jpg" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Boston Skyline seen from Boston Harbor Cruise.
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/esb_view.JPG" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Night view from the Empire State Building (86th Floor).
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/flight_rain.JPG" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Rain seen pouring from clouds (taken from inside a flight)
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/fall_color.jpg" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Falling in love with the Fall Colors.
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/highway.JPG" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                A beautiful highway (Trip to remember).
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/niagara.jpg" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Maid of the Mist - Niagara Falls
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/niagara2.jpg" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Bridge connecting US and Canada
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/rainbow.jpg" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Rainbow!!!!!!!!
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/rainbow2.JPG" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Rainbow on the Niagara Falls
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/snowfall.JPG" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Snow, you beauty!
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/sol.jpg" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Statue of Liberty
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/storm_clouds.jpg" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                There's always a clear sky after the storm passes.
+            </div>
+        </div>
+        <div class="w3-display-container mySlides">
+            <img  src="static/images/photos/sunset.jpg" style="width:100%" >
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                Sunset and it's awesome colors.
+            </div>
+        </div>
+    </div>
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+{% endblock %}

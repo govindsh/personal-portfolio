@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Srikkanth Govindaraajan's Website</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="/static/prism.css" rel="stylesheet">
+
+
+    <!--Google Analytics-->
+	<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-104153341-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!--CSS Style for navigation bar-->
+    <style>
+        .navlink a:hover:not(.active) {
+            background-color: #4CAF50;
+        }
+    </style>
+
+
+    <script src="/static/prism.js"></script>
+
+    <!--Script for bootstrap tour-->
+    {% block head %} {% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">SG</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="dropdown" id="profile">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+                    <li class="navlink"><a href="/visual_resume">Visual Resume</a></li>
+          			<li class="navlink"><a href="/experience">Experience</a></li>
+				    <li class="navlink"><a href="/skills">Skills</a></li>
+          			<li class="navlink"><a href="/projects">Projects</a></li>
+					<li class="navlink"><a href="/education">Education & Research</a></li>
+        		</ul>
+			</li>
+			<li class="dropdown" id="interests">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Passion & Interests<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li class="navlink"><a href="/films">Filmography</a></li>
+					<li class="navlink"><a href="/photography">Photography</a></li>
+					<li class="navlink"><a href="/favorite_quotes">Favorite Quotes</a></li>
+				</ul>
+			</li>
+			<li class="navlink" id="gist_code"><a href="/show_gists">Public Gists</a></li>
+            <li class="navlink" id="blog_post"><a href="/posts">Blog Posts</a></li>
+			<li class="navlink" id="contactme"><a href="/pingMe">Contact</a></li>
+		</ul>
+	</div>
+	</nav>
+    {% block content %} {% endblock %}
+</body>
+</html>

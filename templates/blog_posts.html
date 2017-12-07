@@ -1,0 +1,17 @@
+{% include 'navigation_bar.html' %}
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h2> List of blogs posts</h2>
+{% for title in post_details %}
+<ul>
+   <li><a href="/show_post/{{title}}" class="w3-text-blue" target="_blank">{{title}}</a></li>
+</ul>
+{% endfor %}
+<h2>Coming soon...</h2>
+<ul>
+    <li>Tutorial on hosting Flask apps on PythonAnywhere</li>
+</ul>
+{% endblock %}

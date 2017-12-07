@@ -1,0 +1,63 @@
+{% include "navigation_bar.html" %}
+{% block head %}
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+<div class="w3-container" id="top-link">
+        <h2>Tools, Programming languages and Skills:</h2>
+
+        <input class="w3-input w3-border w3-padding w3-grey" type="text" placeholder="Search for skills..." id="myInput" onkeyup="myFunction()">
+      <ul class="w3-ul w3-margin-top" id="myUL">
+        <li>Python</li>
+        <li>Perl Scripting</li>
+        <li>Java Programming</li>
+        <li>C Programming</li>
+        <li>Shell Scripting</li>
+        <li>Unified Modelling Language (UML)</li>
+        <li>Python Unit Testing (pytest)</li>
+        <li>Flask web framework</li>
+        <li>Jinja2 Template Engine</li>
+        <li>REST API Development and Testing</li>
+        <li>HTML, CSS, W3.CSS</li>
+        <li>jQuery</li>
+        <li>Git & SourceTree</li>
+        <li>SQL Database</li>
+        <li>Operating System Testing: FreeBSD</li>
+        <li>Functional Hardening</li>
+        <li>System Integration</li>
+        <li>Continous Integration Testing (CIT)</li>
+        <li>Regression Testing</li>
+        <li>Agile Methodology</li>
+        <li>IDE: Eclipse, IntelliJ, Pycharm, Brackets</li>
+        <li>BootStrap</li>
+        <li>Mesos</li>
+        <li>Marathon</li>
+        <li>Docker</li>
+        <li>Testing Embedded Software</li>
+        <li>Test Automation</li>
+        <li>Tools: ALM, Jenkins, Jira</li>
+        <li>Perforce</li>
+      </ul>
+    </div>
+<center>
+    <h2><a href="#top-link" class="w3-text-blue">
+        <img src="/static/images/go_up.gif">
+    </a></h2>
+</center>
+{% endblock %}

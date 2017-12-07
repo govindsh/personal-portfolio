@@ -1,0 +1,99 @@
+{% include 'navigation_bar.html' %}
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Google Analytics for your website</title>
+<style>
+    p,ol {
+        font-family:courier;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+    <center>
+        <h2>{{date}} - Google Analytics for your website</h2>
+        <h4>Reading + Setup time: 10 - 15 minutes</h4>
+    </center>
+        <div class="w3-container well">
+            <h3><u>Step 1: Setup Analytics account</u></h3><br>
+            <p>Visit <a class="w3-text-blue" href="analytics.google.com">Google Analytics Website</a> and sign up.</p>
+            <p>
+                Then setup your analytics account. This is done by creating a property for your website and supplying the
+                domain address. In the image below, I have entered the property name and the website address. In this post,
+                I cover only website tracking.<br>
+                <img src="/static/images/blog_post_images/ga1.png" alt="Google Analytics Setup Account" height="600"
+                     width="1000" class="w3-hover-opacity">
+                <br>
+                The next step is a bunch of options for data sharing setting that you may want enabled for your website.
+                Since this is personal preference, I am skipping this section.
+                <br>
+
+                Click Get Tracking ID. Accept the terms and conditions that pop up.<br>
+                <em><strong>Joke: </strong> After marriage, life becomes like installing a software. Whatever, the terms
+                and conditions are, you just agree.</em><br>
+            </p>
+            <br>
+            <h3><u>Step 2: Adding JavaScript tracking code to your website</u></h3>
+            <p>
+                This takes you to the Admin page that shows you lot of different options and tabs. It can be overwhelming
+                at this point but all you need to do is copy the javascript code that is put up under website tracking.<br>
+            </p>
+            <p>
+                If your website has multiple pages and you want to track them all, then paste the JS code on a common page.
+                I had a html template just for the navigation bar and since the navigation bar was included in all the pages,
+                I added the website tracking code to the navigation bar html.<br>
+
+                Once you've added this, now you're all set.
+            </p>
+            <h3><u>Step 3: Testing</u></h3>
+            <p>
+                Famous quote in the QA community: In god we trust, everything else we test.
+            </p>
+            <p>
+                In order to check if the website tracking works, you can go to the admin page.<br>
+                <strong>Hint:</strong> You can access the admin page in the left navigation menu. As on date 9th August 2017,
+                it is at the bottom of the left navigation menu. <br>
+                Then click on tracking code and you should see a button "send test traffic". If you have trouble finding this,
+                CTRL + F (windows) or CMD +F(mac) will help you out.<br>
+                Once you click this, navigate to your home page, you should see some data being generated.
+            </p>
+            <br>
+            <h4>Congratulations!! You are now successfully tracking your website with Google Analytics.</h4>
+            <br><br>
+            <p>
+                <h3><strong>Common Errors / FAQs</strong></h3>
+                <ol>
+                    <li><strong>I added the tracking code but it doesn't work</strong></li><br>
+                    First thing to check out for is if the copy paste had been properly done. Some editors may use a different
+                    encoding that may screw things up. So check this with attention to detail.<br>
+                    If the changes you made ( by adding the tracking code ) are local, make sure you push your changes to the server.
+                    <br>
+                    By all means, if sending test traffic works, your tracking will.
+                    <li><strong>I don't see any data other than active users</strong></li><br>
+                    Yes, this is expected since other metrics such as "When do users visit?", "Geographical locations", "Page Views", etc.
+                     get generated within 24-48 hours.
+                </ol>
+            </p>
+        </div>
+<!--Facebook like button Integration-->
+<!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your like button code -->
+  <div class="fb-like" data-href="http://www.srikkanthgovindaraajan.com/show_post/{{title}}" data-layout="standard"
+       data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+  <br><br>
+
+  <div class="fb-comments" data-href="http://www.srikkanthgovindaraajan.com/show_post/{{title}}" data-numposts="10"></div>
+
+
+{% endblock %}

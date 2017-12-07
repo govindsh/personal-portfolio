@@ -1,0 +1,112 @@
+{% include 'navigation_bar.html' %}
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Create a website tour using Bootstrap-tour</title>
+    <style>
+        p {
+            font-family:courier;
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+    <center>
+        <h2>{{date}} - Create a website tour using Bootstrap-tour</h2>
+        <h4>Reading + Setup + Testing time: ~ 20 minutes</h4>
+    </center>
+
+<div class="w3-container well">
+            <p>Hello again! Ever since I created this website and integrated it with Google Analytics (<a
+                    class="w3-text-blue" href="http://srikkanthgovindaraajan.com/show_post/Google%20Analytics%20for%20your%20website" target="_blank">see this</a>)
+                I have been seeing the statistics and observed that most of the pages have been getting fewer views than
+                the home page. That got me thinking "Hmmm, maybe viewers are not aware of the navigation bar... If only I could
+                create a tour...". Then voila!<br>
+                <h4>Enter bootstrap-tour!</h4>
+            </p><br>
+            <h3>Before we begin:</h3>
+            <p><a class="w3-text-blue" href="http://bootstraptour.com/" target="_blank">What is bootstrap-tour?</a></p>
+            <h3><u>Step 1: Include the bootstrap-tour javascript and css files</u></h3><br>
+            <p>
+                Visit <a href="https://cdnjs.com/libraries/bootstrap-tour" target="_blank" class="w3-text-blue">CDNJS official website</a>
+                and copy the links of <strong>bootstrap-tour.min.js</strong> and <strong>bootstrap-tour.min.css</strong>.
+                This is applicable if you're using bootstrap already.<br>
+                If you're not using bootstrap then copy the link of standalone <strong>bootstrap-tour-standalone.css</strong>
+                and <strong>bootstrap-tour-standalone.min.css</strong>.<br>
+                Include these files in the <code class="w3-codespan">head</code> tag. <br>
+                <div class="w3-code jsHigh">
+                    <h4>HTML head section</h4>
+                    <pre>
+                        <code class="language-markup">
+                            &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/css/bootstrap-tour.min.css" rel="stylesheet">
+                            &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js">&lt;/script>
+                        </code>
+                    </pre>
+                </div>
+            </p>
+            <br>
+            <h3><u>Step 2: Define the steps necessary for the tour.</u></h3>
+            <p>
+                Now that you've added the JavaScript and CSS links, we need to define the steps for the tour. These are
+                just highlights you wish to see in your website and can be tagged to any div element on your webpage. <br>
+                Generally you would want to add this kind of feature on your home page but it also depends on you requirement.
+                I added this to my homepage to show viewers to check every section.<br>
+                We first create a new object instance of Tour(), then add steps using addSteps() method and initialize it.
+                The restart() makes sure to fire the tour everytime the home page is loaded. This is optional. If you do not
+                want to use this option then you can use start() or start(true).<br>
+                <strong>Note: </strong>Make sure your webpage has the elements with the name enclosed in quotes.
+                <div class="w3-code jsHigh">
+                    <h4>HTML head section - Add JavaScript <function></function></h4>
+                    <pre>
+                        <code class="language-javascript">
+                        $(function () {
+                            var tour = new Tour() ;
+
+                            tour.addSteps([{
+                                    element: "#profile",
+                                    title: "<strong>Check out my profile</strong> 😎",
+                                    content: "<h4>Includes my work experience, projects, skill set, etc.</h4>"
+                                },
+                                {
+                                    element: "#blog_post",
+                                    title: "<strong>My latest blog</strong>",
+                                    content: "<h4>Check out my latest post!</h4>"
+                                }]);
+
+                            // Initialize the tour
+                            tour.init().restart();
+                        });
+                        </code>
+                    </pre>
+                </div>
+            </p>
+            <h3><u>Step 3: Testing</u></h3>
+            <p>
+                If you had copied / edited the code correctly, then just launch your homepage / webpage (where the tour is
+                configured) and check it out!<br>
+                There are several other cool things you can do with bootstrap-tour which you can check out <a class="w3-text-blue" href="http://bootstraptour.com/api/">here</a>.
+            </p>
+            <br>
+            <h4>Congratulations!! You have an awesome website tour for viewers who visit your webpage the first time (or everytime)!</h4>
+            <br><br>
+        </div>
+<!--Facebook like button Integration-->
+<!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your like button code -->
+  <div class="fb-like" data-href="http://www.srikkanthgovindaraajan.com/show_post/{{title}}" data-layout="standard"
+       data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+  <br><br>
+
+  <div class="fb-comments" data-href="http://www.srikkanthgovindaraajan.com/show_post/{{title}}" data-numposts="10"></div>
+
+{% endblock %}

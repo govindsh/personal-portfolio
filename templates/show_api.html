@@ -1,0 +1,62 @@
+{% extends "navigation_bar.html" %}
+{% block content %}
+<center>
+<table class="w3-table-all w3-large" style="width:50%;">
+    <thead>
+        <tr class="w3-light-grey w3-hover-red">
+            <th>API</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tr class="w3-hover-green">
+        <td>/education</td>
+        <td>Displays all my education details.</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/experience</td>
+        <td>Display all my work experience details.</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/skills</td>
+        <td>Displays all my skillset (tools, programming languages, etc.)</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/show_gists</td>
+        <td>Displays my public gists on gitHub.</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/projects</td>
+        <td>Displays list of my recent projects</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/education</td>
+        <td>Displays my education and research details.</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/posts</td>
+        <td>Displays list of blog posts</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/show_post/<strong>:title</strong></td>
+        <td>Show details about the post</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/films</td>
+        <td>Displays list of short films directed by me</td>
+    </tr>
+
+    <tr class="w3-hover-green">
+        <td>/favorite_quotes</td>
+        <td>Displays some of my favorite quotes</td>
+    </tr>
+</table>
+</center>
+{% endblock %}

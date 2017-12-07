@@ -1,0 +1,14 @@
+{% extends "navigation_bar.html" %}
+{% block head %}
+
+{% endblock %}
+{% block content %}
+<h4><center>List of my public gists (content to be updated)</center></h4>
+<br>
+<ul>
+{% for gist in gists %}
+    <li><a target="_blank" href="{{gist['html_url']}}" class="w3-text-blue">
+        {{gist['description']}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

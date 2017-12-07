@@ -1,0 +1,225 @@
+{% include "navigation_bar.html" %}
+{% block head %}
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+/*        Style for background image*/
+        .bg {
+            /* The image used */
+            background-image: url("static/images/CinemaBackground.jpg");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: repeat-y;
+            background-size: cover;
+        }
+
+        .imageContainer {
+               width:1000px;
+               height:500px;
+               background-image: url(static/images/script.jpg);
+         }
+
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('/static/images/loading.gif') 50% 50% no-repeat;
+        }
+
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('#movie1_button').click(function() {
+            $('#movie1').show();
+            $('#movie2').slideUp();
+            $('#movie3').slideUp();
+            $('#movie4').slideUp();
+            $('#movie5').slideUp();
+        });
+    });
+    $(document).ready(function() {
+        $('#movie2_button').click(function() {
+            $('#movie2').show();
+            $('#movie1').slideUp();
+            $('#movie3').slideUp();
+            $('#movie4').slideUp();
+            $('#movie5').slideUp();
+        });
+    });
+    $(document).ready(function() {
+        $('#movie3_button').click(function() {
+            $('#movie3').show();
+            $('#movie1').slideUp();
+            $('#movie2').slideUp();
+            $('#movie4').slideUp();
+            $('#movie5').slideUp();
+        });
+    });
+    $(document).ready(function() {
+        $('#movie4_button').click(function() {
+            $('#movie4').show();
+            $('#movie1').slideUp();
+            $('#movie2').slideUp();
+            $('#movie3').slideUp();
+            $('#movie5').slideUp();
+        });
+    });
+    $(document).ready(function() {
+        $('#movie5_button').click(function() {
+            $('#movie5').show();
+            $('#movie1').slideUp();
+            $('#movie2').slideUp();
+            $('#movie4').slideUp();
+            $('#movie3').slideUp();
+        });
+    });
+    </script>
+{% endblock %}
+
+{% block body %}
+<!--    Introduction about Page-->
+    <div class="well w3-animate-top">
+        <center>
+            Here you can find some of the films I have written directed & produced.<br>
+            Founder of <strong>Kaleidoscope Productions (previously known as K-Gang Productions) and SRS Moviez </strong>.<br>
+            All the movies are in my mother tongue (Tamil) but they have subtitles in English.<br>
+
+            Watch it and let me know your comments. Hope you enjoy them.
+        </center>
+    </div>
+
+    <!--div to display the loading image-->
+    <div class="w3-container loader"></div>
+
+<!--    Navigation bar with movie titles-->
+
+    <div class="btn-group btn-group-justified w3-animate-bottom">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" id="movie1_button">
+                <img src="static/images/movie.png" height="50" width="50">Always with you!
+            </button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" id="movie2_button">
+                <img src="static/images/movie.png" height="50" width="50">Will your forgive me?
+            </button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" id="movie3_button">
+                <img src="static/images/movie.png" height="50" width="50">Remember this day
+            </button>
+        </div><div class="btn-group">
+            <button type="button" class="btn btn-primary" id="movie4_button">
+                <img src="static/images/movie.png" height="50" width="50">I quit
+            </button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" id="movie5_button">
+                <img src="static/images/award.jpg" height="50" width="50">Shadow's Truth
+            </button>
+        </div>
+    </div>
+
+<!--    Story of the short film Endrum Unnudan-->
+    <div id="movie1" style="display:none;">
+        <center>
+            <div class="imageContainer">
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <h3><strong>Title: Endrum Unnudan (Always with you!)</strong></h3><br>
+                <strong>Synposis:</strong> Saikrishna comes to meet his brother at dubai after their parents demise. <br>A woman living in their apartment building committs suicide. Saikrishna is able to see the woman's spirit.<br> What happens after that?<br><br><br>
+                <a href="https://www.youtube.com/embed/ezl6PQ7tI5w?autoplay=1" target="movie-window" onclick="$('#movie1').slideUp()">Watch Movie</a>
+            </div>
+        </center>
+    </div>
+
+<!--    Story of short film Mannipaaya-->
+    <div id="movie2" style="display:none;">
+        <center>
+            <div class="imageContainer">
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <h3><strong>Title: Mannipaaya? (Will you forgive me?)</strong></h3><br>
+                <strong>Synposis:</strong> Story of how a guy wins back his girlfriend after a bad breakup.<br><br><br>
+                <a href="https://www.youtube.com/embed/DkwkliJKhtM?autoplay=1" target="movie-window" onclick="$('#movie2').slideUp()">Watch Movie</a>
+            </div>
+        </center>
+    </div>
+
+<!--    Story of short film Intha Naal Nyabagam-->
+    <div id="movie3" style="display:none;">
+        <center>
+            <div class="imageContainer">
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <h3><strong>Title: Intha Naal Nyabagam (Remember this day)</strong></h3><br>
+                <strong>Synposis:</strong> A police inspector's wife is kidnapped by a criminal who escapes from jail. What happens next ?<br><br><br>
+                <a href="https://www.youtube.com/embed/MPRt3NKGvWM?autoplay=1" target="movie-window" onclick="$('#movie3').slideUp()">Watch Movie</a>
+            </div>
+        </center>
+    </div>
+
+<!--    Story of short film - I quit-->
+    <div id="movie4" style="display:none;">
+        <center>
+            <div class="imageContainer">
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <h3><strong>Title: I quit</strong></h3><br>
+                <strong>Synposis:</strong> A short Film in which the protagonist tries to quit smoking.<br><br><br>
+                <a href="https://www.youtube.com/embed/P3ky2B4_0Mc?autoplay=1" target="movie-window" onclick="$('#movie4').slideUp()">Watch Movie</a>
+            </div>
+        </center>
+    </div>
+
+<!--    Story of short film - Nizhalin Nijam-->
+    <div id="movie5" style="display:none;">
+        <center>
+            <div class="imageContainer">
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <h3><strong>Title: Nizhalin Nijam (Shadow's Truth)</strong></h3><br>
+                <strong>Synposis:</strong> Story of a girl Smrithi who doesn't want to move on with her life after a break up. But there exists a truth behind her love story.<br><br><br>
+                <a href="https://www.youtube.com/embed/zaoYVR3NrBw?autoplay=1" target="movie-window" onclick="$('#movie5').slideUp()">Watch Movie</a>
+            </div>
+        </center>
+    </div>
+
+<!--    Background image with youTube source video-->
+    <div class="bg w3-animate-opacity">
+        <center>
+            <iframe name="movie-window" frameborder="0" width="800" height="600" allowfullscreen></iframe>
+        </center>
+    </div>
+
+<br><br>
+<!--Facebook like button Integration-->
+<!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your like button code -->
+  <div class="fb-like" data-href="http://www.srikkanthgovindaraajan.com/films" data-layout="standard"
+       data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+  <br><br>
+
+  <div class="fb-comments" data-href="http://www.srikkanthgovindaraajan.com/films" data-numposts="10"></div>
+{% endblock %}
