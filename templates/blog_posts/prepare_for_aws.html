@@ -1,0 +1,146 @@
+{% include 'navigation_bar.html' %}
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Amazon Web Services (AWS) Certification (Developer Associate) Exam preparation</title>
+{% endblock %}
+
+{% block content %}
+<center>
+        <h2>{{date}} - Amazon Web Services (AWS) Certification (Developer Associate) Exam preparation</h2>
+        <br />
+</center>
+<div class="w3-container well">
+    <center><img src="/static/images/blog_post_images/aws_exams.png" height="400" width="600" class="w3-border"></center>
+    <br />
+    <p>
+        I'm back after a brief hiatus. I was preparing for my first <strong>AWS certification (Developer Associate)</strong>
+        and few other (exciting) things that came my way. Anyways I wanted to write this blog post (just like anyone who clears the exam)
+        to list out who I prepared for the exam.
+        <br /><br />
+
+        <u><strong>Pre-requisites:</strong></u><br />
+        Amazon specifies some pre-requisites before taking the certification but take it from a person who has had no experience with AWS before this, it was not tough to cope up at all.
+        Other than that you need to have some knowledge of networking, notification servies, some databse experience, some programming experience (in any OOP language) which will help you understand some of the concepts. <br />
+        But even if you don't have prior experience inn any of the above, the course mentioned in the preparation section are for the newbies. So no need to panic.  <br /><br />
+
+        <u><strong>Certification Types Overview:</strong></u><br />
+        First things first, (as you already know by now) there are 3 levels of certification - <strong>Associate, Professional & Specialty (not shown in
+        the above image)</strong>. The image is self-explanatory but I will try my best to explain.<br /><br />
+        <strong>AWS Solutions Architect Associate:</strong><br />
+        Go for this, if you want to be a solutions architect and by that I mean, if you want to become an expert in
+        designing a fault-tolerant, highly available, scalable application by using AWS best practices.
+        <strong>This is a pre-requisite before you write the same exam at the Professional level.</strong>
+        <br /><br />
+
+        <strong>AWS Certified Developer Associate</strong><br />
+        Go for this certification, if you want to develop solutions in AWS environment by using their infrastructure. This will require a kind of in depth
+        knowledge about AWS APIs, limits of various AWS services, etc. <strong>No programming experience is required</strong>
+        <br /><br />
+        <strong>AWS Certified SysOps Associate</strong> <br />
+        Yes, you guessed it. Go for this if you want to be a Systems Administrator for a company that uses the AWS environment.
+        This is the most hardest exam at the associate level (no doubt).
+        <br /><br />
+        <strong>Note: You need either Developer Associate or SysOps Associate to do DevOps Professional.</strong><br /><br />
+
+        Many people start with Solutions Architect and then proceed to other certifications but really it is all about what you want. I personally wanted to
+         go ahead with the Developer Associate and play around with the <a href="https://aws.amazon.com/developers/getting-started/python/" target="_blank"
+        class="w3-text-blue">Python SDK for AWS.</a>.
+        <br />
+        The below preparation is (more or less) applicable for all the three certifications. <br /><br />
+
+        <u><strong>Exam Blueprint:</strong></u><br />
+        The exam blueprint is a very good resource that tells you what is expected from you for each certification and the split up for the questions. The exam will
+        be multiple choice (duh!) multiple response (only few questions) type and generally be between 55-60 questions with 80 minutes of time and requires a pass of 65% (generally).
+        Scheduling the exam will cost $150. Exams are available in a proctored center. Certifications are valid for 2 years after which you need to re-certify yourself.<br /><br />
+
+        <a href="https://aws.amazon.com/certification/certified-developer-associate/" target="_blank" class="w3-text-blue">AWS Certified Developer Associate (AWS-CDA)</a> <br />
+        <a href="https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS_certified_developer_associate_blueprint.pdf" target="_blank" class="w3-text-blue">
+            AWS CDA - Exam blueprint
+        </a><br />
+        <a href="http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_developer_associate_examsample.pdf" class="w3-text-blue" target="_blank">AWS CDA - Sample questions</a>
+        <br /><br />
+
+        <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" class="w3-text-blue" target="_blank">AWS Certified Solutions Architect Associate (AWS-CSA)</a><br />
+        <a href="https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_certified_solutions_architect_associate_blueprint.pdf" target="_blank" class="w3-text-blue">
+            AWS CSA - Exam blueprint
+        </a><br />
+        <a href="http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_solutions_architect_associate_examsample.pdf" target="_blank" class="w3-text-blue">AWS CSA - Sample questions</a>
+        <br /><br />
+
+        <a href="https://aws.amazon.com/certification/certified-sysops-admin-associate/" target="_blank" class="w3-text-blue">AWS Certified SysOps Administrator Associate</a><br />
+        <a href="http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_sysops_associate_blueprint.pdf" target="_blank" class="w3-text-blue">
+            SysOps Admininstrator - Exam blueprint
+        </a><br />
+        <a href="http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_sysops_associate_examsample.pdf" target="_blank" class="w3-text-blue">
+            SysOps Admininstrator - Sample questions
+        </a>
+        <br /><br />
+
+
+        <u><strong>Preparation:</strong></u><br />
+        This is (probably) the most difficult & the most interesting part. You will be amazed to see Amazon's sophistication to build this
+        entire cloud infrastructure and the tools for monitoring, deployment, development and testing. <br /><br />
+        So for the lesson plan this is what I did:<br />
+        1. <strong>AWS Concepts: (FREE!)</strong> This Udemy course (link below) helped me gain some basic (oversimplified) explanations for the AWS infrastructure components and cloud terminology.
+        Even though I was familiar with the terms such as fault tolerant, highly available, etc. taking this course will help you (brush it) or get a good understanding. <br> This course is
+        offered for free by LinuxAcademy on Udemy.<br />
+        <a href="https://www.udemy.com/aws-concepts/" target="_blank" class="w3-text-blue">AWS Concepts Course Link</a><br /><br />
+        2. <strong>AWS Essentials: (FREE!)</strong> This Udemy course (link below) is a follow up to the concepts course (above) and dives in deeper into the core components and other AWS services.
+        On completing this course, you will / should have a good understanding of most of the AWS services. This course has a project called "Project Omega" which will help you understand how each component
+        fits into the bigger picture. This course is offered for free by LinuxAcademy on Udemy.<br />
+        <a href="https://www.udemy.com/aws-essentials/" target="_blank" class="w3-text-blue">AWS Essentials Course Link</a><br /><br />
+        3. <strong>AWS Certified Developer Associate: ($15)</strong> This course is offered by acloudguru on Udemy and it's original price is $200 but Udemy has occasional discounts & coupon codes with which you can purchase
+        this (gem of a) course which solely focuses on making you pass the exam. Ryan Kroonenburg (Founder of ACloudGuru & the course instructor) tells you which topics you need to focus for the various certifications and the hands on labs
+        are also helpful in making yourself familiar with the AWS environment.<br />
+        <a href="https://www.udemy.com/aws-certified-developer-associate/" class="w3-text-blue" target="_blank">AWS Certified Developer Associate course link</a><br /><br />
+        4. <strong>(OPTIONAL) AWS Practice Exams: ($20)</strong> This is completely optional. Please consider item 5 (below) before this. I would recommend this item only if you want to get a feel of the exam environment. This exam
+        has only 20 questions with 30 minutes time and you can take it just once. No postmortem of answers.
+        Otherwise please skip to item 5. You need to purchase this online after you sign up for an <a href="https://www.aws.training/Account/LogOnOptions?returnUrl=%2fCertMetrics%2fSso" target="_blank" class="w3-text-blue">
+        AWS Certification Account</a><br /><br />
+        5. <strong> (Strongly Recommend) Whiz Labs Exams: ($30 or $20 sometimes)</strong> I would highly recommend doing this. Whizlabs offer 7 exams (1 diagnostic & 6 practice exams) for developer associate and other exams as well (I think).
+        Each exam has 60 questions with 90 minutes and require 65% to pass. I was initially hesitant to see this after reading some reviews but I'm so happy I bought this. Some (very handful) of questions are repeated over the 7 tests but this
+        is the best way to test yourself against all the services & concepts. You can takes these tests multiple times as well.<br />
+        <a href="https://www.whizlabs.com/" class="w3-text-blue" target="_blank">WhizLabs</a><br /><br />
+        There are some other websites that have labs like qwiklabs but I personally feel the labs on the courses are good enough.<br /><br />
+        6. <strong>(MUST KNOW!!) AWS FAQs:</strong> Without reading this don't attempt the practice exams. You should know the FAQs, limits and API calls for atleast DynamoDB, S3, EC2, VPC, CLoudFormation, SQS, SNS, SWF.<br />
+        <a href="https://aws.amazon.com/faqs/" target="_blank" class="w3-text-blue">AWS FAQs</a> <br /><br />
+        7. <strong>AWS White papers:</strong> This is also another strongly recommended item. You can see all the white papers <a href="https://aws.amazon.com/whitepapers/" target="_blank" class="w3-text-blue">here</a>. Even if you're unable to go
+        through all of the whitepapers, go through the <a href="https://d1.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf" class="w3-text-blue" target="_blank">Security Best practices</a> & the
+        <a href="https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf" target="_blank" class="w3-text-blue">AWS Best practices</a>.<br /><br />
+
+        <u><strong>Key Concepts:</strong></u><br />
+        I'm planning to write a separate flash card like notes for each of the services in AWS, these are notes I collected from the courses above which might help you. This is a work in progress.<br /><br />
+
+        <u><strong>Some other points:</strong></u><br />
+        <ul>
+            <li>After each practice exam, please do a detailed review (postmortem) of where you went wrong. Whizlabs does a great job in giving you links as to where you can find the information for the wrong answers. This will really
+            help you.</li>
+            <li>Dates are generally available on a regular basis so you don't have to worry about whether you would be in a situation where you're done with the prep but the exam date is not till another month. I would also recommend,
+            seeing the available dates in your city just to get an idea of the earliest available date. Some exam centers are available on Saturdays as well.</li>
+            <li>Try to be in the exam center at least 15 minutes early. Try to provision time for unexpected traffic delays, parking, etc.</li>
+            <li>Get good sleep on the day before the exam. </li>
+        </ul>
+
+        That's it for now. Feel free to reach out in case you have any comments / questions. I will update the website with the AWS notes / flash cards. Hope this post helps someone :)
+
+    </p>
+</div>
+<!--Facebook like button Integration-->
+<!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your like button code -->
+  <div class="fb-like" data-href="http://www.srikkanthgovindaraajan.com/show_post/{{title}}" data-layout="standard"
+       data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+  <br><br>
+
+  <div class="fb-comments" data-href="http://www.srikkanthgovindaraajan.com/show_post/{{title}}" data-numposts="10"></div>
+{% endblock %}

@@ -35,6 +35,7 @@ if __name__ == "__main__":
     # insert_post("August 9th 2017", "Google Analytics for your website", "blog_posts/google_analytics.html")
     #insert_post("August 15th 2017", "Create a website tour using bootstrap-tour", "blog_posts/bootstrap_tour.html")
     # insert_post("August 23rd 2017", "Vivegam movie review", "blog_posts/vivegam_movie_review.html")
-    insert_post("September 20th 2017", "Hosting Flask website on Digital Ocean", "blog_posts/flask_on_digital_ocean.html")
+    # insert_post("September 20th 2017", "Hosting Flask website on Digital Ocean", "blog_posts/flask_on_digital_ocean.html")
+    insert_post("December 8th 2017", "Amazon Web Services (AWS) Certification preparation", "blog_posts/prepare_for_aws.html")
     run_select_title_query("Hello World")
     conn.close()
