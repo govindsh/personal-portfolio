@@ -11,6 +11,9 @@
             $("#exJobDetails2").click(function(){
                 $("#exJD2").slideToggle();
             });
+            $("#exJobDetails3").click(function(){
+                $("#exJD3").slideToggle();
+            });
         });
     </script>
 {% endblock %}
@@ -18,24 +21,50 @@
 {% block body %}
 <!--    Current job designation and details-->
     <center>
-    <div class="w3-card-4 w3-hover-shadow w3-animate-top" style="width:50%;" id="current-job">
+        <div class="w3-card-4 w3-hover-shadow w3-animate-top" style="width:50%;" id="current-job">
             <header class="w3-container">
                 <h2>Senior Software Engineer</h2>
                 <img src="static/images/gl-logo.png" style="display:block;">
-                <p>
-                    Dates: December 2016 - Present<br>
-                    Location: Waltham, MA - United States
-                </p>
+                    <p>
+                        Client - Walgreens Boots Alliance <br />
+                        Dates: January 2018 - Present<br />
+                        Location: Deerfield, IL - United States <br />
+                    </p>
             </header>
 
-            <div class="w3-container" id="id01">
+            <div class="w3-container">
                 <img src="static/images/srik-gl.jpg" width="546" height="463" alt="gl-photo">
             </div>
 
             <footer class="w3-container w3-blue">
                 <button id="jobDetails" class="w3-button w3-blue w3-hover-text-black">Click to show duties and responsibilities</button>
                 <div class="w3-container w3-white" style="display:none;" id="gl-details">
-                    <strong>Client - A leading American Telecommunications company</strong><br>
+                    Project - Pharmacy Prescription Management System Renewal
+                    <ul class="w3-ul w3-border">
+                        <li>Senior Automation engineer with focus on Systemic Integration Testing (SIT).</li>
+                        <li>REST API Testing, Behavior Driven Development using frameworks such as Cucumber, Selenium, Microservices, Kafka & Back end testing.</li>
+                    </ul>
+                </div>
+            </footer>
+    </div>
+    <div class="w3-card-4 w3-hover-shadow w3-animate-top" style="width:50%;">
+            <header class="w3-container">
+                <h2>Senior Software Engineer</h2>
+                <img src="static/images/gl-logo.png" style="display:block;">
+                <p>
+                    Client: Verizon Labs <br />
+                    Dates: December 2016 - December 2017<br />
+                    Location: Waltham, MA - United States <br />
+                </p>
+            </header>
+
+            <!--<div class="w3-container">-->
+                <!--<img src="static/images/srik-gl.jpg" width="546" height="463" alt="gl-photo">-->
+            <!--</div>-->
+
+            <footer class="w3-container w3-blue">
+                <button id="exJobDetails1" class="w3-button w3-blue w3-hover-text-black">Click to show duties and responsibilities</button>
+                <div class="w3-container w3-white" style="display:none;" id="exJD1">
                     Project - Smart Home Automation: Develop tools and test framework capable of performing end to end testing of the clients IoT application + DevOps.
                     <ul class="w3-ul w3-border">
                         <li>Design and development of entire test framework for testing end to end Internet of Things (IoT) application using Python.</li>
@@ -71,8 +100,8 @@
             </div>
 
             <footer class="w3-container w3-blue">
-                <button id="exJobDetails1" class="w3-button w3-blue w3-hover-text-black">Click to show duties and responsibilities</button>
-                <div class="w3-container w3-white" style="display:none;" id="exJD1">
+                <button id="exJobDetails2" class="w3-button w3-blue w3-hover-text-black">Click to show duties and responsibilities</button>
+                <div class="w3-container w3-white" style="display:none;" id="exJD2">
                     <strong>NetApp, Inc. is an American multinational storage and data management company.</strong><br>
                     Job Function - QA Engineer for the Storage Operating System (OS)
                     <ul class="w3-ul w3-border">
@@ -105,8 +134,8 @@
             </div>
 
             <footer class="w3-container w3-blue">
-                <button id="exJobDetails2" class="w3-button w3-blue w3-hover-text-black">Click to show duties and responsibilities</button>
-                <div class="w3-container w3-white" id="exJD2" style="display:none;">
+                <button id="exJobDetails3" class="w3-button w3-blue w3-hover-text-black">Click to show duties and responsibilities</button>
+                <div class="w3-container w3-white" id="exJD3" style="display:none;">
                     <strong>HCL Technologies is an Indian multinational IT services company.</strong><br>
                     Job Function - Software Engineer in Test for IPTV designed by a major Japanese multinational corporation.
                     <ul class="w3-ul w3-border">
